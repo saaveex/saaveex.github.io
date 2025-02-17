@@ -1,97 +1,230 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Quicksand:wght@300..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Dosis", sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
 }
-
+html{
+    font-size: 62.5%;
+}
 body{
-    height: 100vh;
-    display: flex;
-    align-items:center ;
-    justify-content: center;
-    background-color: #f4f4f4;
-}
-
-.profile{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 370px;
     width: 100%;
-    background: #fff;
-    border-radius: 24px;
-    padding: 25px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
-
-.profile::before{
-    content: "";
-    position: absolute;
+header{
+    margin-top: 20px;
+    position: fixed;
     top: 0;
     left: 0;
-    height: 36%;
     width: 100%;
-    background: url(https://64.media.tumblr.com/e2d62b2b2c5362c792d8d11739ea8bf5/tumblr_mr6ivf6JHd1rhcun4o3_500.gifv) center;
-    border-radius: 24px 24px 0 0;
-    
-}
-
-.image{
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background-color: #000000;
-    padding: 3px;
-    margin-bottom: 10px;
-}
-.image .profile-img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #fff;
-}
-
-.profile .text-data{
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    color: #333;
+    z-index: 100;
 }
+.logo{
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active{
+    color: #ffefef;
+    border-bottom: 3px solid #ffffff;
+}
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #f8f8f8;
+        border-bottom: 3px solid #ffffff;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #ffffff;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    }
+    nav.active{
+        display: block;
+    }
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #ffffff;
+    }
+}
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: rgb(0, 0, 0);
+}
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+span{
+    color: #fff5f5;
+}
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.home-content p{
+    font-size: 1.6rem;
+}
+.home-img{
+    border-radius: 50%;
+}
+.home-img img{
+    position: relative;
+    width: 32vw;
 
-.text-data .name{
-    font-size: 30px;
+    box-shadow: 0 0 25px solid #fff5f5;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.home-img img:hover{
+    font-size: 1.8rem;
     font-weight: 500;
 }
-
-.text-data .job{
-    font-size: 25px;
-    font-weight: 400;
-}
-
-.profile .media-buttons{
-    display: flex;
-    align-items: center;
-    margin-top: 8px;
-}
-
-.media-buttons .link{
-    display: flex;
-    align-items: center;
+.social-icons a{
+    display: inline-flex;
     justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #fffcfc;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
     color: #ffffff;
-    font-size: 18px;
-    height: 34px;
-    width: 34px;
-    border-radius: 60%;
-    margin: 0 8px;
-    background-color: #000000;
-    text-decoration: none;
 }
-
+.social-icons a:hover{
+    color: rgb(0, 0, 0);
+    transform: scale(1.3) translateY(-5px);
+    background-color: #ffffff;
+    box-shadow: 0  0 25px #ffffff;
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: rgb(0, 0, 0);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #ffffff;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #ffffff;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: #ffffff;
+    color: black;
+    box-shadow: 0 0 25px #fffefe;
+}
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.typing-text span{
+    position: relative;
+}
+.typing-text span::before{
+    content: "software Developer";
+    color: #5b927b;
+    animation: words 20s infinite;
+}
+.typing-text span::after{
+    content: "";
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid rgba(255, 255, 255, 0);
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 3px solid #ffffff;
+    }
+}
+@keyframes words{
+    0%, 25%{
+        content: "Web Developer";
+    }
+    26%, 50%{
+        content: "Developer";
+    }
+    51%, 75%{
+        content: "Web Designer";
+    }
+    76%, 100%{
+        content: "Script Writer";
+    }
+}
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
