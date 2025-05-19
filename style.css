@@ -127,7 +127,7 @@ span {
   overflow: hidden;
 }
 .home-img img {
-  width: 25vw;          
+  width: 20vw;          
   box-shadow: 0 0 25px #fff5f5;
   cursor: pointer;
   transition: transform 0.2s linear;
